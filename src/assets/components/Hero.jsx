@@ -1,40 +1,36 @@
-import hakdog from "../pics/me.jpg";
+import React from "react";
+import Navbar from "./navbar"; 
 import "../../App.css";
-import { useNavigate } from "react-router-dom";
+import profilePic from "../pics/me.jpg";
 
-function Hero() {
-    const navigate = useNavigate();
-
-    return (
+const Hero = () => {
+  return (
+    <>
+      <Navbar /> 
       <div className="hero-container">
-        <header className="hero-header">
-          <nav>
-            <ul className="hero-nav-links">
-              <li onClick={() => navigate("/about")}>About Me</li>
-              <li>Skills</li>
-              <li>Project</li>
-              <li>Contact</li>
-            </ul>
-          </nav>
-        </header>
-    
         <div className="hero-content">
-          <div className="hero-text">
-            <h1>Hello.</h1>
-            <h1>I’m Kayce</h1>
-            <h1>A WMSU Student</h1>
-            
-            <button className="hero-cv-button" onClick={() => navigate("/about")}>
-              About me
-            </button>
+          <div className="text-content">
+            <p>Hello, It's Me</p>
+            <h1>Kayce Vergara</h1>
+            <h2>And I'm a <span className="highlight">WMSU STUDENT</span></h2>
+            <p className="description">I love learn and improve, I stay updated with the latest trends in web development.</p>
+            <div className="social-icons">
+              <a href="#"><i className="fab fa-facebook"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i className="fab fa-linkedin"></i></a>
+            </div>
+            <button className="download-cv">Download CV</button>
           </div>
-    
-          <div className="hero-image-container">
-            <img src={hakdog} alt="Hero" className="hero-image" />
+          <div className="image-content">
+            <div className="image-wrapper">
+              <img src={profilePic} alt="Kayce Vergara" className="profile-pic" />
+            </div>
           </div>
         </div>
       </div>
-    );
-}
+    </>
+  );
+};
 
 export default Hero;
