@@ -6,14 +6,14 @@ import profilePic from "../pics/me.jpg";
 const Hero = () => {
   return (
     <>
-      <Navbar /> 
+      <Navbar />
       <div className="hero-container">
         <div className="hero-content">
           <div className="text-content">
-            <p>Hello, It's Me</p>
+            <p className="intro-text">Hello, It's Me</p>
             <h1>Kayce Vergara</h1>
             <h2>And I'm a <span className="highlight">WMSU STUDENT</span></h2>
-            <p className="description">I love learn and improve, I stay updated with the latest trends in web development.</p>
+            <p className="description">I love learning and improving. I stay updated with the latest trends in web development.</p>
             <div className="social-icons">
               <a href="#"><i className="fab fa-facebook"></i></a>
               <a href="#"><i className="fab fa-twitter"></i></a>
