@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../App.css';
 import Navbar from './navbar';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import profilePic from '../pics/me.jpg'; 
 
 const ContactUs = () => {
+  const [messageSent, setMessageSent] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMessageSent(true);
+    setFormData({ name: '', email: '', message: '' }); 
+    setTimeout(() => setMessageSent(false), 2000); 
+  };
+
   return (
     <>
       <Navbar />
@@ -37,12 +59,38 @@ const ContactUs = () => {
           <div className="contact-right">
             <h2>Contact Me</h2>
             <p>Any questions or remarks? Just send me a message!</p>
-            <form className="contact-form">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows="6" required></textarea>
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <input 
+                type="text" 
+                name="name"
+                placeholder="Your Name" 
+                value={formData.name} 
+                onChange={handleInputChange} 
+                required 
+              />
+              <input 
+                type="email" 
+                name="email"
+                placeholder="Your Email" 
+                value={formData.email} 
+                onChange={handleInputChange} 
+                required 
+              />
+              <textarea 
+                name="message"
+                placeholder="Your Message" 
+                rows="6" 
+                value={formData.message} 
+                onChange={handleInputChange} 
+                required
+              ></textarea>
               <button type="submit">Send Message</button>
             </form>
+            {messageSent && (
+              <div className="message-sent-popup">
+                <p>Your message has been sent successfully!</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
