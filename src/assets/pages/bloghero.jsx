@@ -8,19 +8,19 @@ const Hero = () => {
     <>
       <Navbar />
       <Container fluid className="hero text-center py-5">
-        <h1 className="display-5 fw-semibold">Insights and stories from the world of design</h1>
+        <h1 className="display-5 fw-semibold">Educational Tour:Enjoy Reading!</h1>
         <Form className="d-flex justify-content-center mt-4">
           <Form.Control
-            type="email"
-            placeholder="Email address"
+            type="Text"
+            placeholder="Type.."
             style={{ maxWidth: '300px' }}
           />
           <Button variant="warning" className="ms-2 px-4 text-white">
-            Subscribe
+            Send
           </Button>
         </Form>
         <small className="text-muted d-block mt-2">
-          Weekly updates delivered to your inbox. No spam.
+          Tell me your insights.
         </small>
       </Container>
 
