@@ -33,9 +33,15 @@ const Hero = () => {
               <a href="https://www.instagram.com/lunavergara01?igsh=eXZodmluZjBqZ2lz"><i className="fab fa-instagram"></i></a>
               <a href="www.linkedin.com/in/kayce-ramos-vergara-15bb35359"><i className="fab fa-linkedin"></i></a>
             </div>
-            <button className="download-cv" onClick={handleDownloadCV}>
-              Download CV
-            </button>
+            <div className="button-group">
+  <button className="download-cv" onClick={handleDownloadCV}>
+    Download CV
+  </button>
+  <button className="experience-btn" onClick={() => window.location.href = '/experience'}>
+    My Experience
+  </button>
+</div>
+
           </div>
 
           <div className="image-content">

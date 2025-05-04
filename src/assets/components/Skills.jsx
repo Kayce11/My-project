@@ -3,12 +3,12 @@ import { FaHtml5, FaDraftingCompass, FaVideo } from "react-icons/fa";
 import "../../App.css";
 import Navbar from "./navbar";
 import profilePic from "../pics/me.jpg";
-import htmlSample1 from "../pics/echo.jpg";
-import htmlSample2 from "../pics/terra.jpg";
-import htmlSample3 from "../pics/SE.png";
-import htmlSample4 from "../pics/capstone.jpg";
-import htmlSample5 from "../pics/todo.jpg";
-import htmlSample6 from "../pics/pokemon.jpg";
+import Echo from "../pics/echo.jpg";
+import Terra from "../pics/terra.jpg";
+import SE from "../pics/SE.png";
+import Capstone from "../pics/capstone.jpg";
+import Todo from "../pics/todo.jpg";
+import Pokemon from "../pics/pokemon.jpg";
 
 const cloudinaryBaseURL = "https://res.cloudinary.com/dnzqlbanb/video/upload/";
 
@@ -18,9 +18,9 @@ const skills = [
     icon: <FaVideo className="skill-icon text-red-400" />,
     description: "Editing videos using CapCut and other tools.",
     samples: [
-      { type: "video", src: `${cloudinaryBaseURL}first.mp4`, caption: "Promo Cut" },
+      { type: "video", src: `${cloudinaryBaseURL}first.mp4`, caption: "Highlight Reel" },
       { type: "video", src: `${cloudinaryBaseURL}second.mp4`, caption: "Highlight Reel" },
-      { type: "video", src: `${cloudinaryBaseURL}third.mp4`, caption: "Tutorial Edit" },
+      { type: "video", src: `${cloudinaryBaseURL}third.mp4`, caption: "Highlight Reel" },
     ],
   },
   {
@@ -30,45 +30,40 @@ const skills = [
     samples: [
       {
         type: "image",
-        src: htmlSample1,
-        caption: "EchoGlow",
+        src: Echo,
+        caption: "EchoGlow (ecommerse website)",
         github: "https://github.com/Kayce11/Echoglow",
       },
       {
         type: "image",
-        src: htmlSample2,
-        caption: "Terra",
+        src: Terra,
+        caption: "Terra (ecommerse website)",
         github: "https://github.com/Kayce11/Echoglow",
         
       },
       {
         type: "image",
-        src: htmlSample3,
-        caption: "Software Engineering",
-        github: "https://github.com/czeenotfound/ocr-las",
-       
-      },
-      {
-        type: "image",
-        src: htmlSample5,
-        caption: "Todo List",
-        github: "https://github.com/Kayce11/todolist",
-        
-      },
-      {
-        type: "image",
-        src: htmlSample6,
-        caption: "Pokemon",
-        github: "https://github.com/Kayce11/pokemon",
-     
-      },
-      {
-        type: "image",
-        src: htmlSample4,
+        src: Capstone,
         caption: "Capstone 2",
         live: "https://wmsurmis.online/",
        
       },
+      {
+        type: "image",
+        src: Todo,
+        caption: "Todo List",
+        github: "https://github.com/Kayce11/todo",
+        live: "https://kctodo.netlify.app/",
+        
+      },
+      {
+        type: "image",
+        src: Pokemon,
+        caption: "Pokemon",
+        github: "https://github.com/Kayce11/pokemon",
+        live: "https://pkkayce.netlify.app/",
+      },
+
     ],
   },
 ];
