@@ -37,7 +37,7 @@ const Hero = () => {
   <button className="download-cv" onClick={handleDownloadCV}>
     Download CV
   </button>
-  <button className="experience-btn" onClick={() => window.location.href = '/Experience'}>
+  <button className="experience-btn" onClick={() => window.location.href = '/experience'}>
     My Experience
   </button>
 </div>
