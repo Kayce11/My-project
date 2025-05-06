@@ -5,6 +5,7 @@ import AboutMe from "./assets/components/AboutMe";
 import Skills from "./assets/components/Skills";
 import Contact from "./assets/components/contact";
 import Experience from "./assets/components/Experience";
+import Certs from "./assets/components/certs";
 import BlogHero from "./assets/pages/bloghero";
 import BlogPost from "./assets/pages/blogpost";
 
@@ -16,6 +17,7 @@ function App() {
       <Route path="/skills" element={<Skills />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/Experience" element={<Experience />} />
+      <Route path="/certs" element={<Certs />} />
       <Route path="/blog" element={<BlogHero />} /> 
       <Route path="/blog/:id" element={<BlogPost />} />
     </Routes>

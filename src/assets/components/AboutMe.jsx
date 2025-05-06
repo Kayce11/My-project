@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./navbar"; 
 import "../../App.css";
 import profilePic from "../pics/me.jpg"; 
@@ -48,14 +49,20 @@ const AboutMe = () => {
             </ul>
           </div>
 
-          <div className="certifications-section">
-            <h3>Certifications</h3>
-            <ul>
-              <li>📜 Civil Service Exam Passer (Professional Level)</li>
-              <li>🚑 Code Red Online Learning Program</li>
-              <li>📘 Simplilearn Online Learning Program</li>
-            </ul>
-          </div>
+          <div id="certifications" className="certifications-section">
+  <h3>Certifications</h3>
+  <ul>
+    <li>📜 Civil Service Exam Passer (Professional Level)</li>
+    <li>🚑 Code Red Online Learning Program</li>
+    <li>📘 Simplilearn Online Learning Program</li>
+  </ul>
+
+  <div className="see-more-certifications">
+    <Link to="/certs">📎 See All Certifications</Link>
+  </div>
+</div>
+
+
         </div>
       </div>
     </>

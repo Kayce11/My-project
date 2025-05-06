@@ -1490,4 +1490,160 @@ li {
     height: 120px;
   }
 }
+.see-more-certifications {
+  margin-top: 10px;
+}
 
+.see-more-certifications a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.see-more-certifications a:hover {
+  text-decoration: underline;
+}
+/* App.css */
+
+/* General container for the certifications page */
+.certs-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for each certification section */
+.cert-section {
+  margin-bottom: 30px;
+}
+
+/* Style for the certification images */
+.cert-image-container {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cert-image {
+  width: 200px; /* Adjust the size of the image */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the certification images */
+.cert-image-container:hover .cert-image {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for Simplilearn certification images grid */
+.simplilearn-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-content: center;
+}
+/* Container styling */
+.certs-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Heading */
+.certs-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Each certification section */
+.cert-section {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+/* Certification cards layout */
+.cert-card {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside card */
+.cert-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Certificate description text */
+.cert-description {
+  margin-top: 0.5rem;
+}
+
+/* Simplilearn section grid */
+.simplilearn-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.close-btn:hover {
+  color: #000;
+}
